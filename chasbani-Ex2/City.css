@@ -1,0 +1,40 @@
+h1 {
+	text-transform: uppercase;
+}
+h1::first-line {
+	font-style: italic;
+}
+h1::first-letter {
+	font-size: 130%;
+}
+ol p {
+	font-size: 130%;
+}
+a {
+	font-style: italic;
+}
+.list{
+	text-decoration: underline;
+}
+.list.unorder {
+	list-style: square;
+}
+table {
+  margin: 5px;
+  border-width: 10px;
+  border-style: double;
+  border-color: green;
+  border-radius: 10px;
+}
+a:link{
+	color: blue;
+}
+a:visited {
+	color: purple;
+}
+a:hover {
+	color: green;
+}
+a:active {
+	color: red;
+}

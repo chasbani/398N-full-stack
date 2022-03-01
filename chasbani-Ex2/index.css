@@ -1,0 +1,29 @@
+
+head {
+  font-size: .8em;
+  font-family: Sofia;
+  font-size: 10px;
+}
+body {
+  background: purple;
+  font-family: Sofia;
+  font-size: 20px;
+}
+#City1 {
+  font-family: 'Explora', cursive;
+  font-size: 1.2vw;
+  padding: 2px;
+}
+table {
+  margin: 5px;
+  border-width: 10px;
+  border-style: double;
+  border-color: green;
+  border-radius: 10px;
+}
+head > h1 {
+  font-weight: bold;
+  font-style: oblique;
+  text-align: left;
+  font-size: 2rem;
+}

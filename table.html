@@ -1,0 +1,103 @@
+<!doctype html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Exercise 3 - Due: Oct. 7, by 11pm</title>
+    </head>
+    <style>
+        #myTable {
+            border-width: thick;
+            border-style: ridge;
+            border-collapse: collapse;
+            color: grey;
+        }
+        #myTH {
+            border-bottom: ridge;
+        }
+        #squared {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            color: darkgreen;
+        }
+        #mySum {
+            border-top: ridge;
+        }
+        th, td {
+            border-width: thin;
+            border-style: solid;
+            border-color: grey;
+        }
+    </style>
+    <body>
+
+        <script>
+            "use strict";
+            var tb = document.createElement("TABLE");
+            tb.setAttribute("id", "myTable");
+            document.body.appendChild(tb);
+
+            var th = document.createElement("TR");
+            th.setAttribute("id", "myTH");
+            document.getElementById("myTable").appendChild(th);
+
+            var c1 = document.createElement("TD");
+            var ct1 = document.createTextNode("Count");
+            var c2 = document.createElement("TD");
+            var ct2 = document.createTextNode("Value");
+            var c3 = document.createElement("TD");
+            var ct3 = document.createTextNode("Squared Value");
+            c1.appendChild(ct1);
+            c2.appendChild(ct2);
+            c3.appendChild(ct3);
+            document.getElementById("myTH").appendChild(c1);
+            document.getElementById("myTH").appendChild(c2);
+            document.getElementById("myTH").appendChild(c3);
+
+            var sum = 0;
+            var count = 0;
+            var number = 0;
+            var sum2 = 0;
+            while(!(number === "done" )) {
+                number = prompt("Enter a number");
+                if(number != null && number != "done") {
+                    if ((isNaN(number) || number === "") && number != "done") {
+                        alert("Enter a valid number.");
+                    } else {
+                        count = count + 1;
+                        var temp = Math.round(parseInt(number));
+                        var th = document.getElementById("myTable");
+                        var tempR = th.insertRow();
+                        var tempC = tempR.insertCell();
+                        var c = document.createTextNode(count);
+                        tempC.appendChild(c);
+                        var tempC2 = tempR.insertCell();
+                        var c2 = document.createTextNode(temp);
+                        tempC2.appendChild(c2);
+                        var tempC3 = tempR.insertCell();
+                        var c3 = document.createTextNode(temp * temp);
+                        tempC3.setAttribute("id", "squared");
+                        tempC3.appendChild(c3);
+                        sum += temp;
+                        sum2 += temp * temp;
+                    }
+                }
+
+            }
+            var th = document.getElementById("myTable");
+            var tempR = th.insertRow();
+            tempR.setAttribute("id", "mySum");
+            var tempC = tempR.insertCell();
+            var c = document.createTextNode("Sum:");
+            tempC.appendChild(c);
+            var tempC2 = tempR.insertCell();
+            var c2 = document.createTextNode(sum);
+            tempC2.appendChild(c2);
+            var tempC3 = tempR.insertCell();
+            var c3 = document.createTextNode(sum2);
+            tempC3.appendChild(c3);
+        </script>
+    </body>
+
+    </html>

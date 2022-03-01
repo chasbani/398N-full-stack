@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Research Institute</title>
+    <link rel="stylesheet" href="./css/researchForm.css" />
+    <script src="./js/researchFormValidation.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Research Form</h1>
+    </header>
+
+    <section>
+        <form action="http://localhost:3000/processForm" onsubmit="return validate(this)" method="post" id="myForm">
+            <fieldset>
+                <legend>General Information</legend>
+                <div>
+                    <label for="firstname"> Firstname: </label>
+                    <input type="text" id="firstname" name="firstname" autofocus required>
+                    <label for="lastname"> Lastname: </label>
+                    <input type="text" id="lastname" name="lastname" required> <br>
+                </div>
+                <div>
+                    <label for="phoneFirstPart"> Phone: </label>
+                    <input type="text" id="phoneFirstPart" name="phoneFirstPart" required>
+                    <label for="phoneSecondPart"> - </label>
+                    <input type="text" id="phoneSecondPart" name="phoneSecondPart" required>
+                    <label for="phoneThirdPart"> - </label>
+                    <input type="text" id="phoneThirdPart" name="phoneThirdPart" required>
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Research Study Data</legend>
+                <fieldset id="AHW">
+                    <legend> Age/Height/Weight</legend>
+                        <label for="age"> Age: </label>
+                        <input type="number" id="age" min="1" max="125" name="age">
+                        <label for="feet"> Height: </label>
+                        <input type="number" id="feet" min="2" max="7" name="heightFeet"> <span>Feet</span>
+                        <input type="number" id="inch" min="1" max="11" name="heightInches"> <span>Inches</span>
+                        <label for="weight"> Weight: </label>
+                        <input type="number" id="weight" min="1" max="600" name="weight"> <span>Pounds</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Conditions</legend>
+                    <input type="checkbox" id="HBP" name="highBloodPressure" value="HighBloodPressure">
+                    <label for="HBP">High Blood Pressure</label>
+                    <input type="checkbox" id="Diabetes" name="diabetes" value="Diabetes">
+                    <label for="Diabetes">Diabetes</label>
+                    <input type="checkbox" id="Glaucoma" name="glaucoma" value="Glaucoma">
+                    <label for="Glaucoma">Glaucoma</label>
+                    <input type="checkbox" id="Asthma" name="asthma" value="Asthma">
+                    <label for="Asthma">Asthma</label>
+                    <input type="checkbox" id="none" name="none" value="None">
+                    <label for="none">None</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Time Period</legend>
+                    <input type="radio" id="never" name="period" value="never">
+                    <label for="never">Never</label>
+                    <input type="radio" id="LTY" name="period" value="LessThanAYear">
+                    <label for="LTY">Less than a year</label>
+                    <input type="radio" id="OTT" name="period" value="OneToTwoYears">
+                    <label for="OTT">One to two years</label>
+                    <input type="radio" id="MTT" name="period" value="MoreThanTwoYears">
+                    <label for="MTT">More than two years</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Study Information</legend>
+                    <select name="studyType" id="studyType">
+                        <option value="LongTerm"> Long Term </option>
+                        <option value="ShortTerm"> Short Term </option>
+                    </select>
+                    <input type="text" id="studyFirst" name="firstFourDigits" placeholder="A777" required>-
+                    <input type="text" id="studySecond" name="secondFourDigits" placeholder="B888" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Information (Comments)</legend>
+                    <textarea name="comments"></textarea>    
+                </fieldset>
+                
+            </fieldset>
+            <fieldset>
+                <button type="reset" id="clear"> Clear Form </button>
+                <input type="submit" id="SUBMITBUTTON" value="Submit Information" > 
+            </fieldset>
+        </form>
+        <!-- your form here! -->
+    </section>
+   
+
+    <footer>
+        CMSC Research Institute &reg;
+    </footer>
+</body>
+
+</html>

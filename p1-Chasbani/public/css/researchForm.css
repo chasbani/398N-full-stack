@@ -1,0 +1,28 @@
+/* place your css rules here */
+form fieldset {
+	border-width:medium;
+	border-radius: 10px;
+}
+h1 {
+	text-decoration: underline;
+}
+legend {
+	color: #A0522D;
+	font-weight: bold;
+}
+
+ #AHW > Label {
+	font-weight: bold;
+}
+#AHW > span {
+	font-style: italic;
+}
+
+form > fieldset >legend {
+	font-style: italic;
+}
+footer {
+	border-top: double;
+	border-bottom: double;
+	text-align: center;
+}
